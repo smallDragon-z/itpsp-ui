@@ -1,0 +1,78 @@
+// 按钮的默认样式
+.btn,
+.btn-default {
+  display: inline-block;
+  border: $btn-border-width solid transparent;
+  font: $btn-font-family $btn-font-weight;
+  line-height: $btn-line-height;
+  white-space: nowrap;
+  background-image: none;
+  text-align: center;
+  box-shadow: $btn-box-shadow;
+  transition: $btn-transition;
+  vertical-align: middle;
+  cursor: pointer;
+  @include btn-size ($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
+  &:active{
+    box-shadow: 0px 0px 8px #06C;
+  }
+  &:focus {
+    outline: none;
+  }
+
+  &[disabled],&.disabled {
+    opacity: $btn-disabled-opacity;
+    cursor: not-allowed;
+  }
+}
+
+.disabled {
+  opacity: $btn-disabled-opacity;
+  cursor: not-allowed;
+  box-shadow: none;
+
+  > * {
+    pointer-events: none;
+  }
+}
+
+.btn-lg {
+  @include btn-size ($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-border-radius);
+}
+
+.btn-sm {
+  @include btn-size ($btn-padding-y-sm,$btn-padding-x-sm, $font-size-sm, $btn-border-radius);
+}
+
+// ($bgColor,$color,$border,$hover-bgColor,$hover-border,$hover-color) {
+.btn-primary {
+  @include btn-style ($primary,$white,$white,$primary,$white,$white)
+}
+.btn-success {
+  @include btn-style ($success,$white,$white,$success,$white,$white)
+}
+.btn-info {
+  @include btn-style ($info,$white,$white,$info,$white,$white)
+}
+.btn-warning {
+  @include btn-style ($warning,$white,$white,$warning,$white,$white)
+}
+.btn-danger {
+  @include btn-style ($danger,$white,$white,$danger,$white,$white)
+}
+.btn-link {
+  background-color:#fff;
+  border: 0;
+  color: #000;
+  box-shadow:none;
+  &.disabled,
+  &:disabled{
+    text-decoration: none;
+    &:hover{
+      color: #000;
+    }
+  }
+  &:active{
+  box-shadow: none;
+  }
+}

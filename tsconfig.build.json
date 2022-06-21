@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "build", //编译之后的文件路径
+    "module": "esnext", //输出类型 esnext为标准的es module形式
+    "target": "ES5", //指定ECMAscript版本
+    "declaration": true, //当使用库时，为开发者ts的提示和类型检查 .d.ts
+    "jsx": "react",
+    "moduleResolution": "Node",//使用node方式查找文件
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
+  },
+  "include": [ //希望被编译的文件
+    "src"
+  ],
+  "exclude": [ //不希望被编译的文件
+    "src/**/*.test.tsx",
+    "src/**/*.stories.tsx",
+  ]
+}

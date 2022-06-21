@@ -1,0 +1,90 @@
+.table-box {
+
+  // 表格的基础样式
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    text-align: center;
+
+    td,
+    th {
+
+      border: 1px solid #cad9ea;
+      border-left: 0;
+      border-right: 0;
+      color: #666;
+      height: 30px;
+    }
+
+    thead th {
+      background-color: #CCE8EB;
+    }
+  }
+
+  // 带有斑马线
+  .stripe {
+    .tbody {
+      tr:nth-child(even) {
+        background: #fafafa;
+      }
+
+      tr:nth-child(odd) {
+        background: #fff;
+      }
+    }
+  }
+
+  // 带有纵向边框
+  .longitudinal-border {
+
+    td,
+    th {
+      border: 1px solid #cad9ea;
+    }
+  }
+
+
+}
+
+.table-scroll {
+  max-width: 100%;
+  min-width: 100%;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+
+  .table-box {
+    width: 100%;
+  }
+
+  table {
+    width: max-content;
+  }
+
+}
+
+// 表格表头固定定位
+.table-header-fixed {
+  overflow-y: auto;
+  clear: both;
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+
+  table.table-compoenent {
+    height: 100%;
+
+    thead {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      table-layout: fixed;
+    }
+  }
+
+}

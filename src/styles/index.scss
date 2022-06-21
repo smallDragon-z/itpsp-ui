@@ -1,0 +1,27 @@
+// config
+@import "variables";
+
+//layout
+@import "reboot";
+
+// mixin
+@import 'mixin';
+
+// storybook
+@import 'storybook';
+
+// animation
+@import 'animation';
+// button
+@import '../Components/Button/styles';
+// alert
+@import '../Components/Alert/styles';
+// menu
+@import '../Components/Menu/style';
+// tabs
+@import '../Components/Tabs/styles';
+// icon
+@import '../Components/Icon/styles';
+
+// table
+@import '../Components/Table/styles';

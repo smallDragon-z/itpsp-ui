@@ -1,0 +1,32 @@
+.itpsp-tabs{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  >div{
+    list-style: none;
+    cursor: pointer;
+    div{
+      margin-left:5px ;
+    }
+    >.tabs-content{
+      position: absolute;
+      right: 0;
+      display: none;
+      &.is-show{
+        display: block;
+      }
+    }
+  }
+  .tabs-item{
+    display: flex;
+    position: relative;
+
+    &.disabled{
+      color: #000;
+      cursor:not-allowed;
+    }
+  &.is-active{
+    border-left: 1px solid #f0f;
+  }
+  }
+}

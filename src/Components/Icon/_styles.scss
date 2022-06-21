@@ -1,0 +1,6 @@
+// 使用each将map进行遍历
+@each $key,$val in $theme-colors{
+  .icon-#{$key}{
+    color: $val;
+  }
+}

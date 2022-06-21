@@ -1,0 +1,23 @@
+@mixin btn-style ($bgColor,$color,$border,$hover-bgColor,$hover-border,$hover-color) {
+  background-color: $bgColor;
+  border: $border;
+  color: $color;
+
+  &:hover{
+    background: $hover-bgColor;
+    border-color:$hover-border;
+    color: $hover-color;
+  }
+
+  &:focus,
+  &.focus{
+    background: $hover-bgColor;
+    border-color: $hover-border;
+    color: $hover-color;
+  }
+}
+@mixin btn-size ($p-y,$p-x,$font-size,$border-radius) {
+  padding: $p-y $p-x;
+  border-radius: $border-radius;
+  font-size: $font-size;
+}
